@@ -1,4 +1,7 @@
 
+.container{
+  border: #3388cd !important;
+}
 .side-bar {
   height: 100vh;
   display: flex;
@@ -7,6 +10,10 @@
   padding: 10px;
   position: fixed;
   width: 25vw;
+  background-color: white;
+  left: 0;
+  top: 0;
+  z-index: 5;
 }
 
 
@@ -94,23 +101,22 @@ hr {
 }
 
 
-
-
-
-
-.cards-wrapper{
-  height: 100vh;
-  width: 75vw;
+.wrapper{
+  width: 73vw;
   margin-left: 25vw;
-  
 }
 
 
 .search-island{
   height: 15vh;
   display: flex;
+  background-color: white;
   justify-content: space-around;
   align-items: center;
+  position:fixed;
+  width:inherit;
+  top: 0;
+  right: 0;
 }
 
 .input-field{
@@ -147,5 +153,97 @@ hr {
 }
 
 #apply-btn:hover{
+  cursor: pointer;
+}
+
+
+.cards-wrapper {
+  display: flex;
+  margin: 2%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 15vh;
+}
+
+.card {
+  margin: 15px;
+  width: 325px;
+  border-radius: 25px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.card-img {
+  width: inherit;
+  border-radius: 25px 25px 0 0;
+}
+
+.card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-year {
+  font-size: 1rem;
+  width: 50px;
+  border-radius: 25px;
+  border: 1px #3388cd dashed;
+  padding: 5px;
+  text-align: center;
+}
+.card-info-wrapper {
+  margin: 20px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-info img{
+  fill: #3388cd !important;
+}
+
+hr {
+  margin: 5px;
+}
+
+.card-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.card-price {
+  font-size: 1.2rem;
+}
+
+.card-price span {
+  font-size: 1.5rem;
+}
+
+.card-btn {
+  border: none;
+  height: 5vh;
+  padding: 8px;
+  background-color: #3388cd;
+  color: white;
+  border-radius: 25px;
+  box-shadow: rgba(17, 12, 46, 0.2) 0px 48px 100px 0px;
+}
+.card-btn:hover {
   cursor: pointer;
 }
