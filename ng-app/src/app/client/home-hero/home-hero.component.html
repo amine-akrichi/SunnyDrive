@@ -1,0 +1,47 @@
+<div class="wrapper">
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Embark on the journey of a lifetime with sunnyDrive</h1>
+      your trusted partner in seamless car rentals.
+    </div>
+    <img class="hero-img" src="../../../assets/bmw-3-series.jpg" alt="" />
+  </div>
+  <div class="hero-island">
+    <mat-select class="hero-island-input" id="location-select" placeholder="Pick-up location">
+      @for (location of locations; track location) {
+      <mat-option [value]="location">{{ location }}</mat-option>
+      }
+    </mat-select>
+
+    <div class="input-field">
+      <input
+      class="hero-island-input"
+      placeholder="Pick-up Date"
+      matInput
+      [matDatepicker]="pickuppiker"
+    />
+    <mat-datepicker-toggle
+      id="pickupdate-toggle"
+      matIconSuffix
+      [for]="pickuppiker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #pickuppiker></mat-datepicker>
+    </div>
+
+    <div class="input-field">
+      <input
+      matInput
+      class="hero-island-input"
+      placeholder="Drop-off Date"
+      [matDatepicker]="dropdownpicker"
+    />
+    <mat-datepicker-toggle
+      id="dropoffdate-toggle"
+      matIconSuffix
+      [for]="dropdownpicker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker #dropdownpicker></mat-datepicker>
+    </div>
+    <input id="search-btn" type="button" value="SEARCH">
+  </div>
+</div>

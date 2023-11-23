@@ -1,0 +1,151 @@
+
+.side-bar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  position: fixed;
+  width: 25vw;
+}
+
+
+.price-header {
+  font-size: 1.3em;
+  margin-bottom: 1vh;
+  width: 80%;
+  align-self: center;
+}
+
+
+.price-range-slider {
+  display: flex;
+  width: 80%;
+  margin: 0 20px 0 20px;
+  align-self: center;
+  --mdc-slider-handle-color: #3388cd;
+  --mdc-slider-active-track-color:#3388cd;
+} 
+.filters-header {
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5vh;
+
+}
+
+.filters-header img {
+  margin-right: 10px;
+  justify-self: start;
+}
+
+.filters-header img:hover {
+  cursor: pointer;
+}
+
+.filters-header span {
+  margin-right: 10px;
+  justify-self: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.filters-div {
+  height: 100%;
+  width: 100%;
+  overflow-x: scroll;
+  padding: 5px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-panel {
+  border: none;
+  box-shadow: none !important;
+}
+
+::ng-deep .mat-mdc-checkbox.mat-primary{
+  --mdc-checkbox-selected-hover-icon-color:#3388cd ;
+  --mdc-checkbox-selected-icon-color:#3388cd;
+  --mdc-checkbox-selected-pressed-icon-color:#3388cd;
+  --mdc-checkbox-selected-focus-icon-color:#3388cd;
+
+}
+
+.filter-expansion-header {
+  height: 10vh;
+}
+
+.filter-expansion-header:hover {
+  background-color: white !important;
+}
+
+.filter-expansion-title {
+  font-size: 1.3em;
+  height: 10vh;
+  
+}
+
+hr {
+  margin: 10px;
+}
+
+
+
+
+
+
+.cards-wrapper{
+  height: 100vh;
+  width: 75vw;
+  margin-left: 25vw;
+  
+}
+
+
+.search-island{
+  height: 15vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-field{
+  display: flex;
+  justify-content: center;
+  width: 15vw;
+  margin-top: 0 5px 0 5px;
+}
+
+.search-island-input{
+  border: none;
+  border-bottom:#3388cd 2px solid;
+  padding: 5px;
+  height: 5vh;
+  display: flex;
+  font-size: 1rem;
+  outline: none;
+}
+
+#location-select{
+  width: 20%;
+}
+
+
+#apply-btn{
+  border: none;
+  height: 7vh;
+  padding: 5px;
+  width: 15%;
+  background-color: #3388cd;
+  color: white;
+  font-size: 1rem;
+  border-radius: 25px;
+}
+
+#apply-btn:hover{
+  cursor: pointer;
+}

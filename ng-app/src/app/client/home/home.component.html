@@ -1,0 +1,20 @@
+<nav [ngStyle]="navbarStyles">
+    <span class="logo">sunnyDrive</span>
+    <ul class="nav-list">
+        <li (click)="scroll(hero)">Home</li>
+        <li (click)="scroll(featured)">Featured cars</li>
+        <li >About us</li>
+    </ul>
+    <div class="wrapper">
+        <div class="contact-div">
+            <span>+ 216 277 69 709</span>
+            <span>Carthage Airport</span>
+        </div>
+        <button [routerLink]="['/explore']" id="explore-btn">Explore cars</button>
+        <button id="user-btn"><img src="assets/account.svg" alt=""></button>
+    </div>
+    
+</nav>
+<div  #hero><app-home-hero #hero></app-home-hero></div>
+<div style="padding-top: 10vh;" #featured><app-home-featured-cars #featured></app-home-featured-cars></div>
+

@@ -1,0 +1,136 @@
+<div class="wrapper">
+  <div class="side-bar">
+    <div class="filters-div">
+      <div class="filters-header">
+        <img [routerLink]="['/home']" src="assets/arrow-left.svg" alt="" />
+        <span>FILTERS</span>
+      </div>
+
+      <div class="row">
+        <div class="price-header">
+          <p>Daily Payment</p>
+          {{ minPrice.value }}DT - {{ maxPrice.value }}DT
+        </div>
+        <mat-slider class="price-range-slider" min="200" max="500">
+          <input matSliderStartThumb #minPrice />
+          <input matSliderEndThumb #maxPrice />
+        </mat-slider>
+      </div>
+      <hr />
+      <div class="row">
+        <mat-expansion-panel class="filter-panel">
+          <mat-expansion-panel-header class="filter-expansion-header">
+            <mat-panel-title class="filter-expansion-title">
+              Vehicule type
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p><mat-checkbox color="primary">Sedan</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Hatchback</mat-checkbox></p>
+          <p><mat-checkbox color="primary">SUV</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Pickup</mat-checkbox></p>
+        </mat-expansion-panel>
+      </div>
+      <hr />
+      <div class="row">
+        <mat-expansion-panel class="filter-panel">
+          <mat-expansion-panel-header class="filter-expansion-header">
+            <mat-panel-title class="filter-expansion-title">
+              Fuel
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p><mat-checkbox color="primary">Gasoline</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Diesel</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Electric</mat-checkbox></p>
+        </mat-expansion-panel>
+      </div>
+      <hr />
+      <div class="row">
+        <mat-expansion-panel class="filter-panel">
+          <mat-expansion-panel-header class="filter-expansion-header">
+            <mat-panel-title class="filter-expansion-title">
+              Features
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p><mat-checkbox color="primary">GPS</mat-checkbox></p>
+          <p><mat-checkbox color="primary">A/C</mat-checkbox></p>
+        </mat-expansion-panel>
+      </div>
+      <hr />
+      <div class="row">
+        <mat-expansion-panel class="filter-panel">
+          <mat-expansion-panel-header class="filter-expansion-header">
+            <mat-panel-title class="filter-expansion-title">
+              Transmission
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p><mat-checkbox color="primary">Automatic</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Manual</mat-checkbox></p>
+        </mat-expansion-panel>
+      </div>
+      <hr />
+      <div class="row">
+        <mat-expansion-panel class="filter-panel">
+          <mat-expansion-panel-header class="filter-expansion-header">
+            <mat-panel-title class="filter-expansion-title">
+              Manufacturer
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p><mat-checkbox color="primary">Audi</mat-checkbox></p>
+          <p><mat-checkbox color="primary">BMW</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Dacia</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Citroën</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Mercedes</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Seat</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Skoda</mat-checkbox></p>
+          <p><mat-checkbox color="primary">Volkswagen</mat-checkbox></p>
+        </mat-expansion-panel>
+      </div>
+    </div>
+  </div>
+  <div class="cards-wrapper">
+    <div></div>
+    <div class="search-island">
+      <mat-select
+        class="search-island-input"
+        id="location-select"
+        placeholder="Pick-up location"
+      >
+        @for (location of locations; track location) {
+        <mat-option [value]="location">{{ location }}</mat-option>
+        }
+      </mat-select>
+
+      <div class="input-field">
+        <input
+          class="search-island-input"
+          placeholder="Pick-up Date"
+          matInput
+          [matDatepicker]="pickuppiker"
+        />
+        <mat-datepicker-toggle
+          id="pickupdate-toggle"
+          matIconSuffix
+          [for]="pickuppiker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #pickuppiker></mat-datepicker>
+      </div>
+
+      <div class="input-field">
+        <input
+          matInput
+          class="search-island-input"
+          placeholder="Drop-off Date"
+          [matDatepicker]="dropdownpicker"
+        />
+        <mat-datepicker-toggle
+          id="dropoffdate-toggle"
+          matIconSuffix
+          [for]="dropdownpicker"
+        ></mat-datepicker-toggle>
+        <mat-datepicker #dropdownpicker></mat-datepicker>
+      </div>
+      <input id="apply-btn" type="button" value="APPLY" />
+    </div>
+
+  </div>
+</div>
