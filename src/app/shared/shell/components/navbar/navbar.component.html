@@ -1,0 +1,15 @@
+<nav [style]="navbarStyles">
+  <span class="logo">sunnyDrive</span>
+  <ul class="nav-list">
+    <li (click)="onScroll('home')">Home</li>
+    <li (click)="onScroll('featured')">Featured cars</li>
+    <li>About us</li>
+  </ul>
+  <div class="wrapper">
+    <div class="contact-div">
+      <span>+ 216 277 69 709</span>
+      <span>Carthage Airport</span>
+    </div>
+    <button *ngIf="this.router.url!='/explore'" [routerLink]="['/explore']" class="btn primary lg">Explore cars</button>
+  </div>
+</nav>

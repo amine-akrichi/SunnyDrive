@@ -1,0 +1,43 @@
+<div class="hero-container">
+  <div class="hero-text">
+    <h1>Embark on the journey of a lifetime with sunnyDrive</h1>
+    your trusted partner in seamless car rentals.
+  </div>
+  <img class="hero-img" src="images/hero.png" alt=""/>
+
+  <div class="hero-island">
+    <mat-form-field appearance="fill">
+      <mat-select class="hero-island-input" id="location-select" placeholder="Pick-up location">
+        <mat-option>test</mat-option>
+        <mat-option>test</mat-option>
+        <mat-option>test</mat-option>
+        <mat-option>test</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+      <mat-label>Pick-up date</mat-label>
+      <input matInput [matDatepicker]="pickUpPicker">
+      <mat-datepicker-toggle matIconSuffix [for]="pickUpPicker"></mat-datepicker-toggle>
+      <mat-datepicker #pickUpPicker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Drop-off date</mat-label>
+      <input matInput [matDatepicker]="dropOffPicker">
+      <mat-datepicker-toggle matIconSuffix [for]="dropOffPicker"></mat-datepicker-toggle>
+      <mat-datepicker #dropOffPicker></mat-datepicker>
+    </mat-form-field>
+
+    <button class="btn primary lg">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+           class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+

@@ -1,0 +1,242 @@
+.wrapper {
+  width: 100%;
+  margin: 60px 0;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: row;
+}
+
+
+.summary-section{
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vehicle-details {
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--accent-color);
+  width: 90%;
+  height: 60%;
+  max-height: 500px;
+}
+
+
+
+.request-section{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 60%;
+}
+
+.client-info-header{
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.client-info-header span{
+  font-size: 1rem;
+}
+
+.client-info{
+
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  width: 50%;
+  gap: 50px;
+}
+
+
+
+h2{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 10px;
+  color: var(--secondary-color);
+}
+
+
+
+mat-radio-button div{
+  margin: 10px;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+
+mat-radio-button div svg{
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  color: black;
+}
+
+
+.radio-btn-separator{
+  border: var(--secondary-color) 2px solid;
+  margin-right: 20px;
+}
+
+.card{
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+}
+
+.card img{
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-radius: var(--default-border-radius) var(--default-border-radius) 0 0;
+}
+
+.card-content{
+  height: 100%;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.card-details-wrapper {
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.8rem;
+}
+
+.card-detail svg {
+  width: 25px;
+  color: var(--primary-color);
+}
+
+.card-detail span {
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-footer .price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.price-summary{
+  border-radius: var(--default-border-radius);
+  border: 1px solid var(--accent-color);
+  width: 90%;
+  height: 30%;
+  max-height: 220px;
+  margin-top: 10px;
+}
+
+.price-summary-header{
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.price-summary-header h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+
+}
+
+.quantity-input{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  gap: 5px;
+}
+
+.quantity-input button{
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.quantity-input button svg{
+  width: 20px;
+}
+
+.price-details{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: -5px;
+}
+.price-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.price-detail:last-child{
+  border-top: 1px solid var(--accent-color);
+  padding: 10px 0;
+  font-size: 1.1rem;
+  color: black;
+  justify-content: space-between;
+}
+
+.price-detail:last-child p{
+  color: var(--primary-color);
+}
+
+.form-actions{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10%;
+}
+

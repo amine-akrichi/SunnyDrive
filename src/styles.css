@@ -1,1 +1,186 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../public/fonts/NunitoSans-Variable.ttf") format("truetype");
+  font-style: normal;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+:root {
+  --primary-color: #FF7F3E;
+  --primary-background-color: #FF7F3E30;
+  --secondary-color: #5a5a5a;
+  --secondary-background-color: #5a5a5a30;
+  --accent-color: #d1d3d4;
+  --success-color: #79ac78;
+  --success-background-color: #79ac7830;
+  --background-color: #FFFFFF;
+  --default-border-radius: 25px;
+  --default-box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  --soft-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  --hard-box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  --paragraph-color: #5a5a5a;
+  --paragraph-size: 1rem;
+  --paragraph-weight: 400;
+}
+
+
+html {
+  --mdc-snackbar-supporting-text-line-height: 30px;
+  --mdc-snackbar-supporting-text-size: 1rem;
+  --mdc-snackbar-supporting-text-weight: 600;
+  --mdc-snackbar-container-shape: 25px;
+  --mdc-snackbar-container-color: var(--background-color);
+  --mdc-snackbar-supporting-text-color: var(--secondary-color);
+  --mat-snack-bar-button-color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth !important;
+}
+
+*{
+  animation: fadeIn 0.2s ease-in;
+}
+
+*:not(mat-icon) {
+  font-family: "Nunito Sans", sans-serif !important;
+  padding: 0;
+  margin: 0;
+  animation: fadeIn 0.2s ease-in;
+}
+
+
+*::-webkit-scrollbar {
+  width: .5vw;
+  height: 1vh;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #D1D3d4;
+}
+
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  background-color: #9f9f9f;
+}
+
+
+
+.btn {
+  border: none;
+  border-radius: var(--default-border-radius);
+  transition: 0.3s;
+  font-weight: 700;
+  padding: 10px 20px;
+  margin: auto 5px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.btn.sm {
+  font-size: 0.8rem;
+}
+
+.btn.md {
+  font-size: 0.9rem;
+
+}
+
+.btn.lg {
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 50px;
+}
+
+.btn.xlg {
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 50px;
+  width: 100%;
+}
+
+
+
+.btn svg {
+  width: 24px;
+}
+
+
+.btn.borderless {
+  background-color: white !important;
+}
+
+
+.btn.borderless.primary:hover {
+  background-color: var(--primary-background-color) !important;
+  transition: 0.3s;
+}
+
+
+.btn.primary {
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+}
+
+.btn.success {
+  background-color: var(--success-background-color);
+  color: var(--success-color);
+}
+
+.btn.secondary {
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-color);
+}
+
+.chip {
+  font-size: 0.8rem;
+  text-align: right;
+  font-weight: 800;
+  width: fit-content;
+  align-self: end;
+  padding: 5px;
+  border-radius: var(--default-border-radius);
+}
+
+.chip.md {
+  font-size: 0.9rem;
+}
+
+.chip.lg {
+  font-size: 1.1rem;
+}
+
+.chip.xlg {
+  font-size: 1.1rem;
+  padding: 10px;
+}
+
+.chip.primary {
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+}
+
+
+.chip.dashed {
+  border: 2px dashed var(--primary-color);
+  color: var(--primary-color);
+}
+

@@ -1,0 +1,179 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 0;
+}
+
+
+
+.carousel {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigation-arrow {
+  width: 75px;
+  color: var(--secondary-color);
+  height: 100%;
+}
+
+.navigation-arrow:hover {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  color: var(--primary-color);
+  background-color: var(--primary-background-color);
+}
+
+
+.card-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 50px;
+  flex-direction: column;
+  overflow-x: scroll;
+}
+
+.card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  position: relative;
+  height: inherit;
+  border-radius: var(--default-border-radius);
+  box-shadow: var(--default-box-shadow);
+  z-index: 10;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--default-border-radius);
+  transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+
+}
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
+  border-radius: 0 0 25px 25px;
+  background: #FFFFFF;
+  opacity: 0; /* Set initial opacity to 0 */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the overlay on image hover with fade-in animation */
+
+.card:hover .card-overlay {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  animation: 0.5s ease-in-out;
+}
+
+.card:hover img {
+  height: 70%;
+  transition: 0.5s ease-in-out;
+  border-radius: 25px 25px 0 0;
+}
+
+.card:hover {
+  width: 100%;
+}
+
+.card-overlay-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-overlay-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.card-overlay-content {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card-overlay-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-size: 1rem;
+}
+
+.card-overlay-detail svg {
+  width: 30px;
+  color: var(--primary-color);
+}
+
+.card-overlay-detail span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.card-overlay-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.card-overlay-footer .price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+
+.text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.text h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.text p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}

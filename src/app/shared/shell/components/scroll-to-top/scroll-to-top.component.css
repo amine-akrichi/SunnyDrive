@@ -1,0 +1,39 @@
+button{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  transform: translateX(100px);
+  transition: 0.5s ease-in-out;
+  width: 50px;
+
+  border: none;
+  border-radius: var(--default-border-radius);
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+svg{
+  width: 30px !important;
+  height: 30px !important;
+}
+
+button span{
+  font-size: 0;
+}
+
+button:hover{
+  width: 180px;
+  justify-content: space-evenly;
+  transition: all .5s ease-in-out;
+}
+
+button:hover span{
+  font-size: 1rem;
+  transition: all .5s ease-in-out;
+}
